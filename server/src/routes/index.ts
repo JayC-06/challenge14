@@ -1,10 +1,9 @@
 import { Router } from 'express';
-import { ticketRouter } from '../routes/api/ticket-routes.js';
-import { userRouter } from '../routes/api/user-routes.js';
+import authRouter from './auth-routes.js';
+import apiRouter from './api/index.js';
 
 const router = Router();
 
-router.use('/tickets', ticketRouter);
-router.use('/users', userRouter);
-
+router.use('/api', apiRouter);
+router.use('/auth', authRouter);
 export default router;

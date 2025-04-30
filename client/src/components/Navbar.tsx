@@ -6,6 +6,7 @@ const Navbar = () => {
   const [ loginCheck, setLoginCheck ] = useState(false);
 
   const checkLogin = () => {
+    console.log(auth.loggedIn());
     if(auth.loggedIn()) {
       setLoginCheck(true);
     }
